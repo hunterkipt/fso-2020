@@ -4,11 +4,14 @@ import ReactDOM from 'react-dom';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
-const Hello = (props) => {
+const Hello = ({name, age}) => {
+  const bornYear = () => new Date().getFullYear() - age
+  
   return(
     <div>
-      <p>Hello idiot {props.name}! You are {props.age} years too young to challenge me!
+      <p>Hello {name}! You are {age} years too young to challenge me!
       </p>
+      <p>So you were probably born in {bornYear()}</p>
     </div>
   )
 }
